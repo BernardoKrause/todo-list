@@ -1,12 +1,18 @@
-<div id="<%= dom_id task %>">
-  <p>
-    <strong>Description:</strong>
-    <%= task.description %>
-  </p>
+<div id="<%= dom_id task %>" class="Task">
+  <div class="Task-Content" >
+    <label for="">
+      <input type="checkbox" id="task-check">
+    </label>
+    <p class="Task-Description">
+      <%= task.description %>
+    </p>
 
-  <p>
-    <strong>Deadline:</strong>
-    <%= task.deadline %>
-  </p>
+    <p>
+      <strong>Deadline:</strong>
+      <%= task.deadline %>
+    </p>
 
+    <div><%= link_to "Editar", edit_task_path(task) %></div>
+    <div><%= button_to "Destroy this task", task, method: :delete %></div>
+  </div>
 </div>

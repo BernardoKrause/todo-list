@@ -1,0 +1,16 @@
+.Task {
+    border: 4px solid #592A9E;
+    border-radius: 12px;
+    padding: 2vh 1vw;
+}
+
+.Task-Content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.Task-Description {
+    font-size: 36px;
+}

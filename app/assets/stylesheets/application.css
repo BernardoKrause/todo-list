@@ -23,13 +23,16 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
+
+   a {
+      text-decoration: none;
+   }
    
    .Main-Container {
       display: flex;
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      height: 80vh;
       gap: 4vh;
    }
    
@@ -38,13 +41,28 @@
    .Home-Content {
       font-size: 3rem;
       font-weight: 400;
+      margin-top: 12vh;
       width: 48%;
       text-align: center;
    }
+
+   /* Tasks */
+   .Task-Container {
+      padding: 8vh 0;
+      width: 80vw;
+   }
+
+   input[type="checkbox"] {
+      width: 22px;
+      height: 22px;
+   }
    
+
+   /* Media-Queries */
    @media (max-width: 768px) {  
       .Home-Content {
          font-size: 2rem;
          width: 84%;
       }
    }
+
