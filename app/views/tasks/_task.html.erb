@@ -8,11 +8,11 @@
     </p>
 
     <p>
-      <strong>Deadline:</strong>
+      <strong>Prazo:</strong>
       <%= task.deadline %>
     </p>
 
-    <div><%= link_to "Editar", edit_task_path(task) %></div>
-    <div><%= button_to "Destroy this task", task, method: :delete %></div>
+    <div><%= link_to image_tag('Edit.png', alt: 'Editar'), edit_task_path(task) %></div>
+    <div><%= button_to image_tag('Delete.png', alt: 'Deletar'), task, method: :delete %></div>
   </div>
 </div>

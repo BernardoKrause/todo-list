@@ -12,16 +12,16 @@
   <% end %>
 
   <div>
-    <%= form.label :description, style: "display: block" %>
+    <%= form.label :description, "O que deve ser feito?", style: "display: block" %>
     <%= form.text_field :description %>
   </div>
 
   <div>
-    <%= form.label :deadline, style: "display: block" %>
+    <%= form.label :deadline, "Prazo", style: "display: block" %>
     <%= form.date_field :deadline %>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Criar Tarefa" %>
   </div>
 <% end %>

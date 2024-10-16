@@ -4,6 +4,12 @@
     padding: 2vh 1vw;
 }
 
+.Tasks-List {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
 .Task-Content {
     display: flex;
     justify-content: space-between;
@@ -13,4 +19,8 @@
 
 .Task-Description {
     font-size: 36px;
+}
+
+.New-Task-Button {
+    align-self: flex-end;
 }

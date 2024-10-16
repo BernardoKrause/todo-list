@@ -5,14 +5,11 @@
 
 <main class="Main-Container">
   <div class="Task-Container">
-    <button class="Application-Button"><%= link_to "Nova Tarefa", new_task_path %></button>
-    <h1>Suas Tarefas:</h1>
-    <div id="tasks">
+    <button class="Application-Button New-Task-Button"><%= link_to "Nova Tarefa", new_task_path %></button>
+    <h1 class="title">Suas Tarefas:</h1>
+    <div id="tasks" class="Tasks-List">
       <% @tasks.each do |task| %>
         <%= render task %>
-        <p>
-          <%= link_to "Show this task", task %>
-        </p>
       <% end %>
     </div>
   </div>
