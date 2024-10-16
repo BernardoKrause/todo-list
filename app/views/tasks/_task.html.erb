@@ -1,8 +1,11 @@
 <div id="<%= dom_id task %>" class="Task">
-  <div class="Task-Content" >
-    <label for="">
-      <input type="checkbox" id="task-check">
-    </label>
+  <div class="Task-Content">
+
+    <div>
+      <%= check_box_tag "task_complete_#{task.id}", task.id, false, id: "#{task.id}", class: "task-checkbox" %>
+      <%= label_tag "task_complete_#{task.id}", " " %>
+    </div>
+
     <p class="Task-Description">
       <%= task.description %>
     </p>

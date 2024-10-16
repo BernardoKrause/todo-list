@@ -18,7 +18,8 @@
 }
 
 .Task-Description {
-    font-size: 36px;
+    font-size: 1.8rem;
+    width: 30%;
 }
 
 .New-Task-Button {

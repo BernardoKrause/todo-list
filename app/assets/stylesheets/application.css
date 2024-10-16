@@ -24,10 +24,11 @@
 
    a {
       text-decoration: none;
+      color: #fff;
    }
 
    button {
-      background-color: #fff;
+      background-color: transparent;
       border: none;
    }
 
