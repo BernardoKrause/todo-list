@@ -1,11 +1,13 @@
-<% content_for :title, "Editing task" %>
+<%= render(HeaderComponent.new) %>
 
-<h1>Editing task</h1>
+<% content_for :title, "Editando Tarefa" %>
 
-<%= render "form", task: @task %>
+<main class="Main-Container mt-4">
+  <h1 class="title">Editing task</h1>
 
-<br>
+  <%= render "form", task: @task %>
 
-<div>
-  <%= link_to "Back to tasks", tasks_path %>
-</div>
+  <button class="Application-Button">
+    <%= link_to "Voltar", tasks_path %>
+  </button class="Application-Button">
+</main>

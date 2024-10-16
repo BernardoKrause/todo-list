@@ -1,3 +1,5 @@
+<% content_for :title, "Tarefas" %>
+
 <%= render(HeaderComponent.new) %>
 
 <main class="Main-Container">
@@ -6,5 +8,5 @@
         suas respectivas prioridades! Não perca tempo 
         e comece já a criar sua lista de tarefas.
     </div>
-    <a href="/tasks" class="Application-Button">Crie sua lista</a>
+    <button class="Application-Button"><%= link_to "Acessar lista", tasks_path %></button>
 </main>
