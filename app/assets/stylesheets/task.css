@@ -2,6 +2,7 @@
     border: 4px solid #592A9E;
     border-radius: 12px;
     padding: 2vh 1vw;
+    transition: .3s;
 }
 
 .Tasks-List {
@@ -24,4 +25,11 @@
 
 .New-Task-Button {
     align-self: flex-end;
+}
+
+.Checked {
+    background-color: #582a9e83;
+    transition: .3s;
+    color: #fff;
+    text-decoration: line-through;
 }

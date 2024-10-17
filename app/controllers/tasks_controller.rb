@@ -47,6 +47,17 @@ class TasksController < ApplicationController
     end
   end
 
+  # UPDATE STATUS
+  def update_status
+    @task = Task.find(params[:id])  # Encontra a tarefa pelo ID
+
+    if @task.update(concluido: params[:task][:concluido])  # Atualiza apenas o campo concluido
+      render json: { status: "success" }  # Retorna sucesso se a atualização for bem-sucedida
+    else
+      render json: { status: "error", message: @task.errors.full_messages }, status: :unprocessable_entity
+    end
+  end
+
   # DELETE /tasks/1 or /tasks/1.json
   def destroy
     @task.destroy!
@@ -63,8 +74,8 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
-    def task_params
-      params.require(:task).permit(:description, :deadline)
-    end
+  # Only allow a list of trusted parameters through.
+  def task_params
+    params.require(:task).permit(:description, :deadline, :concluido)
+  end
 end

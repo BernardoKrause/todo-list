@@ -1,18 +1,17 @@
 <div id="<%= dom_id task %>" class="Task">
   <div class="Task-Content">
 
-    <div>
-      <%= check_box_tag "task_complete_#{task.id}", task.id, false, id: "#{task.id}", class: "task-checkbox" %>
-      <%= label_tag "task_complete_#{task.id}", " " %>
+    <div data-controller="tasks" >
+      <%= check_box_tag "task[concluido]", 1, task.concluido, class: "task-checkbox", id: "task_#{task.id}", data: { action: "tasks#toggle" } %>
     </div>
+
 
     <p class="Task-Description">
       <%= task.description %>
     </p>
 
     <p>
-      <strong>Prazo:</strong>
-      <%= task.deadline %>
+      <%= task.deadline.strftime("%d/%m/%Y") %>
     </p>
 
     <div><%= link_to image_tag('Edit.png', alt: 'Editar'), edit_task_path(task) %></div>
