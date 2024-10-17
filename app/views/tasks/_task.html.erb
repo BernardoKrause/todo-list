@@ -15,6 +15,6 @@
     </p>
 
     <div><%= link_to image_tag('Edit.png', alt: 'Editar'), edit_task_path(task) %></div>
-    <div><%= button_to image_tag('Delete.png', alt: 'Deletar'), task, method: :delete %></div>
+    <div><%= button_to image_tag('Delete.png', alt: 'Deletar'), task, data: { turbo_method: :delete, turbo_confirm: "Deseja excluir a tarefa?" } %></div>
   </div>
 </div>
