@@ -1,9 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @list %>
-<%= button_to "Destroy this list", @list, method: :delete %>
+<%= render HeaderComponent.new %>
 
-<div>
-  <%= link_to "Edit this list", edit_list_path(@list) %> |
-  <%= link_to "Back to lists", lists_path %>
-</div>
+<main class="Main-Container mt-4">
+  <%= render @list %>
+
+  <button class="Application-Button"><%= link_to "Voltar", lists_path %></button>
+</main>

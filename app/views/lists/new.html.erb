@@ -1,11 +1,15 @@
-<% content_for :title, "New list" %>
+<% content_for :title, "Nova Lista" %>
 
-<h1>Nova Lista</h1>
+<%= render HeaderComponent.new %>
 
-<%= render "form", list: @list %>
+<main class="Main-Container mt-4">
+    <h1>Nova Lista</h1>
 
-<br>
+    <%= render "form", list: @list %>
 
-<button class="Application-Button">
-    <%= link_to "Voltar", lists_path %>
-</button class="Application-Button">
+    <br>
+
+    <button class="Application-Button">
+        <%= link_to "Voltar", lists_path %>
+    </button class="Application-Button">
+</main>

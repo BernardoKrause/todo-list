@@ -1,8 +1,9 @@
 <div id="<%= dom_id task %>" class="Task">
   <div class="Task-Content">
 
-    <div data-controller="tasks" >
-      <%= check_box_tag "task[concluido]", 1, task.concluido, class: "task-checkbox", id: "task_#{task.id}", data: { action: "tasks#toggle" } %>
+    <div data-controller="tasks" class="custom-checkbox-container">
+      <%= check_box_tag "task[concluido]", 1, task.concluido, class: "custom-checkbox task-checkbox", id: "task_#{task.id}", data: { action: "tasks#toggle", list_id: @list.id, task_id: task.id } %>
+      <label for="task_<%= task.id %>"></label>
     </div>
 
 
@@ -11,10 +12,10 @@
     </p>
 
     <p>
-      <%= task.deadline.strftime("%d/%m/%Y") %>
+      <%= task.deadline ? task.deadline.strftime("%d/%m/%Y") : "" %>
     </p>
 
-    <div class="task-interact-container">
+    <div class="interact-container">
       <div><%= link_to image_tag('Edit.png', alt: 'Editar', class: 'task-interact-img'), edit_list_task_path(task.list, task) %></div>
       <div><%= button_to image_tag('Delete.png', alt: 'Deletar', class: 'task-interact-img'), list_task_path(task.list, task), method: :delete, data: { turbo_confirm: "Deseja excluir a tarefa?" } %></div>
     </div>

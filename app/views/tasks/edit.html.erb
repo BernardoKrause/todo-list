@@ -1,6 +1,6 @@
 <%= render(HeaderComponent.new) %>
 
-<% content_for :title, "Editando Tarefa" %>
+<% content_for :title, "Editar Tarefa" %>
 
 <main class="Main-Container mt-4">
   <h1 class="title">Editar Tarefa</h1>
@@ -8,6 +8,6 @@
   <%= render "form", task: @task %>
 
   <button class="Application-Button">
-    <%= link_to "Voltar", lists_path %>
+    <%= link_to "Voltar", list_path(@list) %>
   </button class="Application-Button">
 </main>

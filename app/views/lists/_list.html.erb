@@ -1,10 +1,11 @@
-<div id="<%= dom_id list %>">
+<div id="<%= dom_id list %>" class="List mt-2">
   <p>
-    <h1 class="title"><%= list.title %></h1>
+    <div class="Element-Header">
+      <h1 class="title"><%= list.title %></h1>
+      <button class="Application-Button"><%= link_to 'Nova Tarefa', new_list_task_path(list) %></button>
+    </div>
     
     <%= render list.tasks %>
 
-    <%= link_to 'Adicionar Tarefa', new_list_task_path(list) %>
   </p>
-  
 </div>

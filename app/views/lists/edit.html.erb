@@ -1,12 +1,13 @@
-<% content_for :title, "Editing list" %>
+<% content_for :title, "Editar lista" %>
 
-<h1>Editing list</h1>
+<%= render HeaderComponent.new %>
 
-<%= render "form", list: @list %>
+<main class="Main-Container mt-4">
+  <h1>Editar lista</h1>
 
-<br>
+  <%= render "form", list: @list %>
 
-<div>
-  <%= link_to "Show this list", @list %> |
-  <%= link_to "Back to lists", lists_path %>
-</div>
+  <button class="Application-Button">
+    <%= link_to "Voltar", lists_path %>
+  </button>
+</main>

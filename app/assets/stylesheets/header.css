@@ -9,10 +9,10 @@
 
 .Application-Header a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: .7s;
 }
 
 .Application-Header a:hover {
-    color: #0000008f;
+    color: #ff5e13a1;
 }

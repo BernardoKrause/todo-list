@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to lists_path, notice: "Task was successfully created." }
+        format.html { redirect_to list_path(@list) }
         format.json { render :show, status: :created, location: @list }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +40,7 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to lists_path, notice: "Task was successfully updated." }
+        format.html { redirect_to list_path(@list) }
         format.json { render :show, status: :ok, location: @task }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -51,7 +51,8 @@ class TasksController < ApplicationController
 
   # UPDATE STATUS
   def update_status
-    @task = Task.find(params[:id])  # Encontra a tarefa pelo ID
+    @list = List.find(params[:list_id])
+    @task = @list.tasks.find(params[:id])  # Encontra a tarefa pelo ID
 
     if @task.update(concluido: params[:task][:concluido])  # Atualiza apenas o campo concluido
       render json: { status: "success" }  # Retorna sucesso se a atualização for bem-sucedida
@@ -68,7 +69,6 @@ class TasksController < ApplicationController
     @task.destroy!
 
     respond_to do |format|
-      format.html { redirect_to list_tasks_path(@list), status: :see_other, notice: "Task was successfully destroyed." }
       format.json { head :no_content }
     end
   end

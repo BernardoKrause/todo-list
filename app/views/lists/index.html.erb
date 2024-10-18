@@ -6,14 +6,22 @@
 
 <main class="Main-Container mt-2">
   <div class="List-Container">
-    <h1 class="title">Listas</h1>
-    <button class="Application-Button New-Task-Button"><%= link_to "Nova Lista", new_list_path %></button>
+    <div class="Element-Header" >
+      <h1 class="title">Listas</h1>
+      <button class="Application-Button New-Task-Button"><%= link_to "Nova Lista", new_list_path %></button>
+    </div>
     <div id="lists" class="Lists-Container">
       <% @lists.each do |list| %>
-        <%= render list %>
-        <p>
-          <%= link_to "Show this list", list %>
-        </p>
+        <%= link_to list do %>
+          <div class="List-Element">
+            <h1 class="List-Title"><%= list.title %></h1>
+            
+            <div class="interact-container">
+              <%= link_to image_tag('Edit.png', alt: 'Editar'), edit_list_path(list) %>
+              <%= button_to image_tag('Delete.png', alt: 'Deletar'), list, method: :delete, data: { turbo_confirm: "Deseja excluir a lista?" } %>
+            </div>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>

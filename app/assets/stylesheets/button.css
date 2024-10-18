@@ -1,7 +1,7 @@
 .Application-Button {
     background-color: #FF5C13;
     font-size: 1.5rem;
-    border-radius: 24px;
+    border-radius: 8px;
     padding: 2vh 2vw;
     transition: .3s;
 }
