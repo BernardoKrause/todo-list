@@ -5,7 +5,13 @@
       <button class="Application-Button"><%= link_to 'Nova Tarefa', new_list_task_path(list) %></button>
     </div>
     
-    <%= render list.tasks %>
+    <div class="Task-Container">
+      <% if list.tasks.length === 0 %>
+        <p class="mt-2">Ainda não há nenhuma tarefa. Crie uma para começar!</p>
+      <% else %>
+          <%= render list.tasks %>
+      <% end %>
+    </div>
 
   </p>
 </div>

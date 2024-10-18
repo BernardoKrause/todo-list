@@ -11,7 +11,10 @@
       <button class="Application-Button New-Task-Button"><%= link_to "Nova Lista", new_list_path %></button>
     </div>
     <div id="lists" class="Lists-Container">
-      <% @lists.each do |list| %>
+      <% if (@lists.length === 0) %>
+        <p class="mt-2">Ainda não há nenhuma lista. Crie uma para começar!</p>
+      <% else %>
+        <% @lists.each do |list| %>
         <%= link_to list do %>
           <div class="List-Element">
             <h1 class="List-Title"><%= list.title %></h1>
@@ -22,6 +25,7 @@
             </div>
           </div>
         <% end %>
+      <% end %>
       <% end %>
     </div>
   </div>

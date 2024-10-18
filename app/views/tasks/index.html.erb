@@ -6,7 +6,7 @@
   <div class="Task-Container">
     <button class="Application-Button New-Task-Button"><%= link_to "Nova Tarefa", new_list_task_path %></button>
     <h1 class="title">Suas Tarefas:</h1>
-    <div id="tasks" class="Tasks-List">
+    <div id="tasks">
       <% @tasks.each do |task| %>
         <%= render task %>
       <% end %>
