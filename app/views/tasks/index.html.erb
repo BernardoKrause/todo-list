@@ -1,11 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Tarefas" %>
-<%= render(HeaderComponent.new) %>
 
 <main class="Main-Container">
   <div class="Task-Container">
-    <button class="Application-Button New-Task-Button"><%= link_to "Nova Tarefa", new_task_path %></button>
+    <button class="Application-Button New-Task-Button"><%= link_to "Nova Tarefa", new_list_task_path %></button>
     <h1 class="title">Suas Tarefas:</h1>
     <div id="tasks" class="Tasks-List">
       <% @tasks.each do |task| %>

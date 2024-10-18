@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Listas" %>
+
+<%= render(HeaderComponent.new) %>
+
+<main class="Main-Container mt-2">
+  <div class="List-Container">
+    <h1 class="title">Listas</h1>
+    <button class="Application-Button New-Task-Button"><%= link_to "Nova Lista", new_list_path %></button>
+    <div id="lists" class="Lists-Container">
+      <% @lists.each do |list| %>
+        <%= render list %>
+        <p>
+          <%= link_to "Show this list", list %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</main>

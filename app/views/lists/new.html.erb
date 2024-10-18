@@ -1,0 +1,11 @@
+<% content_for :title, "New list" %>
+
+<h1>Nova Lista</h1>
+
+<%= render "form", list: @list %>
+
+<br>
+
+<button class="Application-Button">
+    <%= link_to "Voltar", lists_path %>
+</button class="Application-Button">

@@ -1,0 +1,10 @@
+<div id="<%= dom_id list %>">
+  <p>
+    <h1 class="title"><%= list.title %></h1>
+    
+    <%= render list.tasks %>
+
+    <%= link_to 'Adicionar Tarefa', new_list_task_path(list) %>
+  </p>
+  
+</div>

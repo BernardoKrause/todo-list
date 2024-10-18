@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  resources :lists do
+    resources :tasks
+  end
   get "home/index"
-  resources :tasks
 
   patch "/tasks/update_status/:id", to: "tasks#update_status"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
