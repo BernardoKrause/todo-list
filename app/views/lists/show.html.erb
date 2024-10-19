@@ -5,5 +5,7 @@
 <main class="Main-Container mt-4">
   <%= render @list %>
 
-  <button class="Application-Button"><%= link_to "Voltar", lists_path %></button>
+  <button class="Application-Button">
+    <%= link_to "Voltar", :back %>
+    </button>
 </main>
