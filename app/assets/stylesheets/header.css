@@ -13,10 +13,17 @@
 
 .Application-Header a {
     text-decoration: none;
-    color: #fff;
     transition: .7s;
 }
 
 .Application-Header a:hover {
     color: #ff5e13a1;
 }
+
+.Header-Logged-User {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+

@@ -1,0 +1,19 @@
+pt-BR:
+  activerecord:
+    models:
+      user: "Usuário"
+    attributes:
+      user:
+        email: "E-mail"
+        password: "Senha"
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "não pode ficar em branco"
+            password:
+              blank: "não pode ficar em branco"
+        messages:
+          blank: "não pode ficar em branco"
+          too_short: "é muito curto (mínimo de %{count} caracteres)"
