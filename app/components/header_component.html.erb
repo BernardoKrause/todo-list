@@ -1,1 +1,5 @@
-<header class="Application-Header"><%= link_to "TO DO LIST", root_path %></header>
+<header class="Application-Header">
+    <%= link_to "TO DO LIST", root_path %>
+    <%= button_to "Log out", destroy_user_session_path, class: "Log-Out-Button", method: :delete %>
+    
+</header>

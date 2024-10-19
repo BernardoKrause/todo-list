@@ -5,6 +5,10 @@
     box-shadow: -1px 6px 5px 0px rgba(0, 0, 0, 0.534);
     min-height: 12vh;
     padding: 4vh 12vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .Application-Header a {
