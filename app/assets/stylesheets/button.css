@@ -4,6 +4,7 @@
     border-radius: 8px;
     padding: 2vh 2vw;
     transition: .3s;
+    color: #fff;
 }
 
 .Application-Button:hover {
@@ -19,4 +20,13 @@
     width: 8rem;
     font-size: 1.2rem;
     align-self: flex-end;
+}
+
+.Cancel-Account-Button {
+    border: 2px solid #FF5C13;
+    color: #fff;
+    align-self: center;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 1vh 1vw;
 }

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { unlocks: "users/unlocks" }
 
   resources :lists do
     resources :tasks
