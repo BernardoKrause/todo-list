@@ -68,6 +68,13 @@
    }
 
    /* Classes gerais */
+   .alert-container {
+      color: #FF5C13;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+   }
+
    .remember-me-container {
       display: flex;
       align-items: center; 

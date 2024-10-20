@@ -12,7 +12,7 @@ pt-BR:
       last_attempt: "Você tem mais uma tentativa antes que sua conta seja bloqueada"
       not_found_in_database: "%{authentication_keys} ou senha inválidos."
       timeout: "Sua sessão expirou. Por favor, faça login novamente para continuar."
-      unauthenticated: "Você precisa fazer login ou se registrar antes de continuar"
+      unauthenticated: ""
       unconfirmed: "Você deve confirmar o seu endreço de e-mail antes de continuar."
     mailer:
       confirmation_instructions:
@@ -50,7 +50,7 @@ pt-BR:
     unlocks:
       send_instructions: "Você receberá um e-mail com instruções sobre como desbloquear a sua conta em alguns minutos."
       send_paranoid_instructions: "Se o seu e-mail existir em nossa base de dados, você receberá um e-mail com instruções sobre como desbloquear a sua conta em alguns minutos."
-      unlocked: "Conta desbloqueada com sucesso. Por favor, logue para continuar."
+      unlocked: ""
   errors:
     messages:
       already_confirmed: "já foi confirmado, por favor logue para continuar"
