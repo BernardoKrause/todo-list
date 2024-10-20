@@ -52,7 +52,13 @@ pt-BR:
       send_paranoid_instructions: "Se o seu e-mail existir em nossa base de dados, você receberá um e-mail com instruções sobre como desbloquear a sua conta em alguns minutos."
       unlocked: ""
   errors:
+    models:
+      user:
+        attributes:
+          email:
+            taken: "E-mail já está em uso"
     messages:
+      taken: "já está em uso"
       already_confirmed: "já foi confirmado, por favor logue para continuar"
       confirmation_period_expired: "deve ser confirmada dentro de %{period}, por favor solicite novamente"
       expired: "expirou, por favor solicite um novo"
