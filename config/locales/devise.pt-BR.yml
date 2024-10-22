@@ -75,6 +75,7 @@ pt-BR:
       task:
         description: "Descrição"
       user:
+        name: "Nome"
         email: "E-mail"
         password: "Senha"
         password_confirmation: "Confirmação de senha"

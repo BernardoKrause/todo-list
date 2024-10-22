@@ -9,7 +9,7 @@
     
     <div class="Task-Container">
       <% if list.tasks.length === 0 %>
-        <p class="mt-2">Ainda não há nenhuma tarefa. Crie uma para começar!</p>
+        <p class="mt-2">Olá <%= list.user.name %>, ainda não há nenhuma tarefa. Crie uma para começar!</p>
       <% else %>
           <%= render list.tasks %>
       <% end %>

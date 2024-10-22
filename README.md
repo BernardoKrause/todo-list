@@ -2,7 +2,7 @@
 
 Aplicação TODO List em Ruby On Rails
 
-# Uso
+## Uso
 
 * Criar uma conta: O usuário pode se registrar inserindo seu nome, e-mail e senha.
 

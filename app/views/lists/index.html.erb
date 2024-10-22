@@ -12,7 +12,7 @@
     </div>
     <div id="lists" class="Lists-Container">
       <% if (@lists.length === 0) %>
-        <p class="mt-2">Ainda não há nenhuma lista. Crie uma para começar!</p>
+        <p class="mt-2">Olá <%= current_user.name %>, ainda não há nenhuma lista. Crie uma para começar!</p>
       <% else %>
         <% @lists.each do |list| %>
         <%= link_to list do %>
