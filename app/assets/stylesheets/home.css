@@ -1,0 +1,16 @@
+.Home-Content {
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 12vh;
+    width: 56%;
+    text-align: center;
+}
+
+ 
+/* Media-Queries */
+@media (max-width: 768px) {  
+    .Home-Content {
+       font-size: 2rem;
+       width: 84%;
+    }
+}

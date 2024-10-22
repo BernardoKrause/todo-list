@@ -1,7 +1,7 @@
 <div id="<%= dom_id task %>" class="Task">
   <div class="Task-Content">
 
-    <div data-controller="tasks" class="custom-checkbox-container">
+    <div data-controller="tasks">
       <%= check_box_tag "task[concluido]", 1, task.concluido, class: "custom-checkbox task-checkbox", id: "task_#{task.id}", data: { action: "tasks#toggle", list_id: @list.id, task_id: task.id } %>
       <label for="task_<%= task.id %>"></label>
     </div>

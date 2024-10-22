@@ -1,9 +1,20 @@
+button {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    padding: 1vh 1vw;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 .Application-Button {
     background-color: #FF5C13;
     font-size: 1.5rem;
-    border-radius: 8px;
     padding: 2vh 2vw;
     transition: .3s;
+    border-radius: 4px;
     color: #fff;
 }
 
@@ -13,8 +24,6 @@
 
 .Log-Out-Button {
     background-color: #FF5C13;
-    border-radius: 8px;
-    padding: 1vh 1vw;
     transition: .3s;
     color: #fff;
     width: 8rem;
@@ -26,7 +35,5 @@
     border: 2px solid #FF5C13;
     color: #fff;
     align-self: center;
-    border-radius: 4px;
     font-size: 1rem;
-    padding: 1vh 1vw;
 }

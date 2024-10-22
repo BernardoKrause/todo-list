@@ -11,6 +11,7 @@
     justify-content: space-between;
 }
 
+
 .Application-Header a {
     text-decoration: none;
     transition: .7s;
@@ -27,3 +28,25 @@
     gap: 4rem;
 }
 
+.Element-Header {
+    display: flex;
+    justify-content: space-between;
+    align-self: center;
+    gap: 12vw;
+}
+
+   /* Media-Queries */
+@media (max-width: 768px) {  
+    .Application-Header {
+        flex-direction: column;
+    }
+
+    .Element-Header {
+        width: 100%;
+    }
+
+    .Header-Title {
+        width: 100vw;
+        text-align: center;
+    }
+}

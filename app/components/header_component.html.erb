@@ -1,9 +1,9 @@
 <header class="Application-Header">
-    <%= link_to "TO DO LIST", root_path %>
+    <%= link_to "TO DO LIST", root_path, class: "Header-Title" %>
     <div class="Header-Logged-User">
         <% if user_signed_in? %>
             <span class="fs-15">
-                <%= link_to "Editar Perfil", edit_user_registration_path, class: "fs-15" %>
+                <%= link_to "Editar Perfil", edit_user_registration_path %>
             </span>
             <%= button_to "Sair", destroy_user_session_path, class: "Log-Out-Button", method: :delete %>
         <% else %>

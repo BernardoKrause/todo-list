@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicação TODO List em Ruby On Rails
 
-Things you may want to cover:
+# Uso
 
-* Ruby version
+* Criar uma conta: O usuário pode se registrar inserindo seu nome, e-mail e senha.
 
-* System dependencies
+* Login: Após registrar-se, o usuário deve fazer login.
 
-* Configuration
+* Criar listas e tarefas: Após logado, o usuário pode criar listas e adicionar tarefas dentro delas.
 
-* Database creation
+* Marcar tarefas como concluídas: Ao concluir uma tarefa, o usuário pode marcar a tarefa como concluída.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Editar e deletar tarefas: O usuário pode editar o nome e a descrição da tarefa ou removê-la caso não seja mais necessária.

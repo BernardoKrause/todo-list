@@ -1,7 +1,7 @@
 <%= render HeaderComponent.new %>
 
 <main class="Main-Container mt-4">
-  <h2 class="title">Recuperar minha senha</h2>
+  <h1 class="title">Recuperar minha senha</h1>
 
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>

@@ -70,6 +70,10 @@ pt-BR:
         other: "Não foi possível salvar este(a) %{resource}:"
   activerecord:
     attributes:
+      list:
+        title: "Título"
+      task:
+        description: "Descrição"
       user:
         email: "E-mail"
         password: "Senha"
