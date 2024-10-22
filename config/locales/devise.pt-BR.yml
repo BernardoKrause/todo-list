@@ -58,6 +58,7 @@ pt-BR:
           email:
             taken: "E-mail já está em uso"
     messages:
+      blank: "não pode ficar em branco"
       taken: "já está em uso"
       already_confirmed: "já foi confirmado, por favor logue para continuar"
       confirmation_period_expired: "deve ser confirmada dentro de %{period}, por favor solicite novamente"
@@ -67,3 +68,21 @@ pt-BR:
       not_saved:
         one: "Não foi possível salvar este(a) %{resource}:"
         other: "Não foi possível salvar este(a) %{resource}:"
+  activerecord:
+    attributes:
+      user:
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+        current_password: "Senha atual"
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: "não coincide com a senha"
+            password:
+              too_short: "é muito curta (mínimo de %{count} caracteres)"
+            current_password:
+              blank: "a senha atual não pode ficar em branco"
+    

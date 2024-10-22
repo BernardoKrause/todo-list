@@ -48,6 +48,7 @@
       flex-direction: column;
       align-items: center;
       gap: 4vh;
+      margin-bottom: 4vh;
    }
 
    .Element-Header {

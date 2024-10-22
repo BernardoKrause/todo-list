@@ -1,10 +1,15 @@
-<%= render HeaderComponent.new(current_user: current_user) %>
+<%= render HeaderComponent.new %>
 
 <main class="Main-Container mt-4">
   <h2>Editar <%= resource_name.to_s.humanize %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-mail *" %>
+    </div>
 
     <div class="field">
       <%= f.label :password %> <i>(deixe em branco se não quiser mudar)</i><br />
