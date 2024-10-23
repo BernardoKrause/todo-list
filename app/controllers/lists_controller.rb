@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_list, only: %i[ show edit update destroy ]
+  before_action :correct_user, only: [ :show, :edit, :update, :destroy ]
 
   # GET /lists or /lists.json
   def index
@@ -9,8 +10,16 @@ class ListsController < ApplicationController
 
   # GET /lists/1 or /lists/1.json
   def show
-    @list = List.find(params[:id])
+    @list = current_user.lists.find(params[:id])
     @tasks = @list.tasks
+  end
+
+  def correct_user
+    @list = current_user.lists.find_by(id: params[:id])
+    if @list.nil?
+      flash[:alert] = "Você não tem permissão para acessar essa lista."
+      redirect_to lists_path
+    end
   end
 
   # GET /lists/new
@@ -39,6 +48,7 @@ class ListsController < ApplicationController
 
   # PATCH/PUT /lists/1 or /lists/1.json
   def update
+    @list = current_user.lists.find(params[:id])
     respond_to do |format|
       if @list.update(list_params)
         format.html { redirect_to lists_path }
@@ -52,6 +62,7 @@ class ListsController < ApplicationController
 
   # DELETE /lists/1 or /lists/1.json
   def destroy
+    @list = current_user.lists.find(params[:id])
     @list.destroy!
 
     respond_to do |format|
