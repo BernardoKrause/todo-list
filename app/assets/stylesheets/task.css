@@ -33,13 +33,12 @@
     align-self: flex-end;
 }
 
-
 .task-interact-img {
     width: 24px;
 }
 
 .Checked {
-    background-color: #582a9e83;
+    opacity: 0.5;
     transition: .3s;
     color: #fff;
     text-decoration: line-through;

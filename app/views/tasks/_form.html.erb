@@ -18,7 +18,12 @@
 
   <div>
     <%= form.label :deadline, "Prazo", style: "display: block" %>
-    <%= form.date_field :deadline %>
+    <%= form.date_field :deadline, min: Time.zone.now.strftime("%Y-%m-%dT%H:%M") %>
+  </div>
+
+  <div>
+    <%= form.label :priority, "Prioridade", style: "display: block" %>
+    <%= form.select :priority, Task.priorities.keys.map { |w| [w.humanize, w] }, {}, class: "form-control" %>
   </div>
 
   <div>

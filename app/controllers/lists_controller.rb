@@ -11,7 +11,7 @@ class ListsController < ApplicationController
   # GET /lists/1 or /lists/1.json
   def show
     @list = current_user.lists.find(params[:id])
-    @tasks = @list.tasks
+    @tasks = @list.tasks.order(concluido: :asc, priority: :desc)
   end
 
   def correct_user
