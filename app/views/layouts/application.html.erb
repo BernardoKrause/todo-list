@@ -16,6 +16,8 @@
   </head>
 
   <body>
+    <%= render "/layouts/header" %>
+
     <%= yield %>
     <div class="alert-container">
       <% if flash[:alert] %>
